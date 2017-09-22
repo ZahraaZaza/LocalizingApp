@@ -17,8 +17,8 @@
         android:id="@+id/imgButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.91"
-        android:onClick="ImageClicked"
+        android:layout_weight="0.65"
+        android:onClick="showMap"
         android:src="@drawable/country"/>
 
 
@@ -29,6 +29,19 @@
         android:layout_weight="0.09"
         android:text="@string/country"
         />
+
+    <TextView
+        android:id="@+id/outputError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.08"
+     />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/searchForLocation" />
 
 
 </LinearLayout>

@@ -11,6 +11,7 @@ import android.net.Uri;
 public class MainActivity extends AppCompatActivity {
 
     TextView tv;
+    TextView outputError;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,11 +19,25 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         tv = (TextView) findViewById(R.id.countryName);
+        outputError = (TextView) findViewById(R.id.outputError);
 
     }
 
-    public void ImageClicked(){
-        String country = tv.getText().toString();
+    public void showMap(View v){
+       // String country = tv.getText().toString();
+        String country = getResources().getString(R.string.country);
+
+        Uri  geoLocation = Uri.parse("geo:0,0?q=" + Uri.encode(country));
+        Intent geoIntent = new Intent(Intent.ACTION_VIEW);
+
+        geoIntent.setData(geoLocation);
+        if (geoIntent.resolveActivity(getPackageManager()) != null) {
+            startActivity(geoIntent);
+        } else {
+            outputError.setText(R.string.errorNoGeo);
+        }
+
+        /*
         String latitude = "";
         String longitude = "";
         String geo = "geo:";
@@ -59,16 +74,17 @@ public class MainActivity extends AppCompatActivity {
         //Uri myUri = Uri.parse("geo:0,0?q=" + Uri.encode("Montreal"));
 
         Uri myUri = Uri.parse(geo);
+        */
 
-        showMap(myUri);
 
     }
 
-    public void showMap(Uri geoLocation) {
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(geoLocation);
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        }
+    public void launchSearch(View view) {
+
+        startActivity(new Intent(this, MapActivity.class));
+
     }
+
+
+
 }

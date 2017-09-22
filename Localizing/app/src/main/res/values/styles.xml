@@ -9,4 +9,14 @@
 
     </style>
 
+    <style name="ZazaTheme">
+        <item name="android:background">@color/colorTurquoise</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:background">@color/colorGreenish</item>
+        <item name="android:textColor">@color/colorBlueGray</item>
+    </style>
+
+
 </resources>
