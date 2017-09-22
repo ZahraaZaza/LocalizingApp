@@ -7,7 +7,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 /**
- * Created by Zahraa on 2017-09-22.
+ * Created by Zahraa Horeibi on 2017-09-22.
  */
 
 public class MapActivity extends AppCompatActivity {
