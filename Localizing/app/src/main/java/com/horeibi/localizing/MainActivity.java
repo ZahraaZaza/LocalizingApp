@@ -25,19 +25,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void showMap(View v){
-
+    public void sendCountryName(View v){
         String country = getResources().getString(R.string.country);
-
-        Uri  geoLocation = Uri.parse("geo:0,0?q=" + Uri.encode(country));
-        Intent geoIntent = new Intent(Intent.ACTION_VIEW);
-
-        geoIntent.setData(geoLocation);
-        if (geoIntent.resolveActivity(getPackageManager()) != null) {
-            startActivity(geoIntent);
-        } else {
-            outputError.setText(R.string.errorNoGeo);
-        }
+        Intent intent = new Intent(this, MapActivity.class);
+        intent.putExtra(EXTRA_MESSAGE, country);
+        startActivity(intent);
     }
 
     public void launchSearch(View view) {
