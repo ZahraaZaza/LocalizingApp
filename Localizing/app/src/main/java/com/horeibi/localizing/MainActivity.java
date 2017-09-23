@@ -2,11 +2,13 @@ package com.horeibi.localizing;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.content.Intent;
 import android.net.Uri;
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -80,9 +82,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void launchSearch(View view) {
-
-        startActivity(new Intent(this, MapActivity.class));
-
+        Intent intent = new Intent(this, MapActivity.class);
+        startActivity(intent);
+        Log.d("TAG", "Launching MapActivity");
     }
 
 

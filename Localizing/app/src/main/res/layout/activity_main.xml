@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.65"
         android:onClick="showMap"
-        android:src="@drawable/country"/>
+        android:background="@drawable/country"/>
 
 
     <TextView
@@ -41,6 +41,7 @@
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="launchSearch"
         android:text="@string/searchForLocation" />
 
 
