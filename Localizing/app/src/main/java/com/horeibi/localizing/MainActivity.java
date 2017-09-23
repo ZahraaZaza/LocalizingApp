@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showMap(View v){
-       // String country = tv.getText().toString();
+
         String country = getResources().getString(R.string.country);
 
         Uri  geoLocation = Uri.parse("geo:0,0?q=" + Uri.encode(country));
@@ -38,47 +38,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             outputError.setText(R.string.errorNoGeo);
         }
-
-        /*
-        String latitude = "";
-        String longitude = "";
-        String geo = "geo:";
-
-        switch (country){
-            case "Canada":
-                    latitude = "56.1304";
-                    longitude = "-106.3468";
-                break;
-
-            case "USA":
-                    latitude = "37.0902";
-                    longitude = "-95.7129";
-                break;
-
-            case "Italia":
-                latitude = "41.8719";
-                longitude = "12.5674";
-                break;
-
-            case "France":
-                latitude = "46.2276";
-                longitude = "2.2137";
-                break;
-
-            case "Russia":
-                latitude = "61.5240";
-                longitude = "105.3188";
-                break;
-        }
-
-        geo += latitude + "," + longitude;
-
-        //Uri myUri = Uri.parse("geo:0,0?q=" + Uri.encode("Montreal"));
-
-        Uri myUri = Uri.parse(geo);
-        */
-
-
     }
 
     public void launchSearch(View view) {
