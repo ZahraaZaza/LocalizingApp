@@ -30,14 +30,14 @@ public class MapActivity extends Activity {
 
         etLocation = (EditText) findViewById(R.id.inputLocation);
         output = (TextView) findViewById(R.id.output);
-
+        
+        etLocation.setText(location);
 
     }
 
     public void validateData(View v) {
         if (location == null)
             location = etLocation.getText().toString();
-        etLocation.setText(location);
         Log.d("TAG", "Getting user input");
         if (location != null) {
             Log.d("TAG", "Valid Input");
