@@ -32,13 +32,14 @@ public class MapActivity extends Activity {
         String location = etLocation.getText().toString();
         Log.d("TAG", "Getting user input");
         if (location != null) {
+            Log.d("TAG", "Valid Input");
             Uri geoLocation = Uri.parse("geo:0,0?q=" + Uri.encode(location));
             Intent geoIntent = new Intent(Intent.ACTION_VIEW);
 
             geoIntent.setData(geoLocation);
             if (geoIntent.resolveActivity(getPackageManager()) != null) {
                 startActivity(geoIntent);
-                Log.d("TAG", "Valid input, launching google maps");
+                Log.d("TAG", "Launching google maps");
             } else {
                 output.setText(R.string.errorNoGeo);
             }
