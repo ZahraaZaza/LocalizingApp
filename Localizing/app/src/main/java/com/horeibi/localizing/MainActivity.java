@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     public void sendCountryName(View v){
         String country = getResources().getString(R.string.country);
         Intent intent = new Intent(this, MapActivity.class);
-        intent.putExtra(EXTRA_MESSAGE, country);
+        intent.putExtra("COUNTRY", country);
         startActivity(intent);
     }
 

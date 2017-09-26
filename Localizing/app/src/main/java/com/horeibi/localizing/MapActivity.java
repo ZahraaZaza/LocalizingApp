@@ -27,7 +27,7 @@ public class MapActivity extends Activity {
         // get a handle on the text fields
         // Get the Intent that started this activity and extract the string
         Intent intent = getIntent();
-        location = intent.getStringExtra(EXTRA_MESSAGE);
+        location = intent.getStringExtra("COUNTRY");
 
         etLocation = (EditText) findViewById(R.id.inputLocation);
 
