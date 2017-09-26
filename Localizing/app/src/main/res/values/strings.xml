@@ -3,6 +3,9 @@
     <string name="country">Canada</string>
     <string name="errorNoGeo">No action defined for geo intent</string>
     <string name="searchForLocation">Search for a Location</string>
+<<<<<<< HEAD
 
+=======
+>>>>>>> e6f75149fa8bb352c32cf68e15d20b737989062a
 
 </resources>
