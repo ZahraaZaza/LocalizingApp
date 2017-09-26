@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Localizing.iml" filepath="$PROJECT_DIR$/Localizing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LocalizingApp.iml" filepath="$PROJECT_DIR$/LocalizingApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
