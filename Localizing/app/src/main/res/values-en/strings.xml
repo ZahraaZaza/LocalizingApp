@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Localizing</string>
-    <string name="country">Canada</string>
+    <string name="country">United-States of America</string>
     <string name="errorNoGeo">No action defined for geo intent</string>
     <string name="searchForLocation">Search for a Location</string>
 

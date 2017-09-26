@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showMap(View v){
-    	// random
        // String country = tv.getText().toString();
         String country = getResources().getString(R.string.country);
 
@@ -37,12 +36,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             outputError.setText(R.string.errorNoGeo);
         }
-
-    }
-
-    public void launchSearch(View view) {
-
-        startActivity(new Intent(this, MapActivity.class));
 
     }
 
