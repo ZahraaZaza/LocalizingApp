@@ -1,12 +1,14 @@
 <resources>
     <string name="app_name">Localizing</string>
     <string name="country">Canada</string>
-    <string name="errorNoGeo">No action defined for geo intent</string>
     <string name="searchForLocation">Search for a Location</string>
     <!-- Strings for MapActivity-->
     <string name="outputText"></string>
-    <string name="sendButton">Send to Map Search</string>
+    <string name="mapSearchBtn">Send to Map Search</string>
     <string name="locationHint">Enter Location</string>
     <string name="locationEmpty">Your location cannot be empty!</string>
+    <string name="errorNoGeo">No action defined for geo intent</string>
+    <string name="googleSearchBtn">Google Search</string>
+    <string name="errorNoResult">No action defined for web search intent</string>
 
 </resources>

@@ -5,7 +5,8 @@
     <!-- Strings pour MapActivity-->
 
     <string name="outputText"></string>
-    <string name="sendButton">Envoyer au Map Search</string>
+    <string name="mapSearchBtn">Envoyer au Map Search</string>
     <string name="locationHint">Entrer votre location</string>
     <string name="locationEmpty">Votre location ne peut pas être vide!</string>
+    <string name="googleSearchBtn">Recherche Google</string>
 </resources>

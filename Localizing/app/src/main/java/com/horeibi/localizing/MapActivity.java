@@ -1,5 +1,6 @@
 package com.horeibi.localizing;
 
+import android.app.SearchManager;
 import android.content.Intent;
 import android.net.Uri;
 import android.app.Activity;
@@ -29,17 +30,18 @@ public class MapActivity extends Activity {
         location = intent.getStringExtra(EXTRA_MESSAGE);
 
         etLocation = (EditText) findViewById(R.id.inputLocation);
+
         output = (TextView) findViewById(R.id.output);
-        
+
         etLocation.setText(location);
 
     }
 
     public void validateData(View v) {
-        if (location == null)
             location = etLocation.getText().toString();
-        Log.d("TAG", "Getting user input");
-        if (location != null) {
+            Log.d("TAG", "Getting user input");
+
+        if (!location.isEmpty()) {
             Log.d("TAG", "Valid Input");
             Uri geoLocation = Uri.parse("geo:0,0?q=" + Uri.encode(location));
             Intent geoIntent = new Intent(Intent.ACTION_VIEW);
@@ -56,5 +58,29 @@ public class MapActivity extends Activity {
         }
 
     }
+
+    /**
+     * Does a google search of the user's input (assuming its always a location)
+     * @param v
+     */
+    public void googleSearch(View v){
+        location = etLocation.getText().toString();
+        Log.d("TAG", "Getting user input");
+        if(!location.isEmpty()) {
+            Log.d("TAG", "Valid Input");
+            Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+            // search string
+            intent.putExtra(SearchManager.QUERY, location);
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+                Log.d("TAG", "Launching google search");
+            } else {
+                output.setText(R.string.errorNoResult);
+            }
+        } else {
+            output.setText(R.string.locationEmpty);
+        }
+    }
+
 
 }

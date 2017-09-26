@@ -32,6 +32,12 @@
                 <data android:scheme="geo" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+
+            <intent-filter>
+                <action android:name="com.google.android.gms.actions.ACTION_WEB_SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
         </activity>
     </application>
 
